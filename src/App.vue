@@ -1,8 +1,15 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">Abouuutt</router-link>
   </nav>
+  Test
+  <div id="image">
+    <img svg-inline src="./assets/icons/arrrow-left.svg" />
+  </div>
+  <div>
+    <Async />
+  </div>
   <router-view />
 </template>
 

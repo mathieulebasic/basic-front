@@ -26,6 +26,7 @@
       <i class="far fa-edit mr-1" />
       <span>Edit</span>
     </BrandButton>
+    <IconsSVG name="arrrow-left" class="w-6 h-6 mr-1" />
   </div>
 </template>
 
@@ -33,12 +34,14 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import BrandButton from "@/components/BrandButton.vue";
+import IconsSVG from "@/components/IconsSVG.vue";
 
 export default {
   name: "HomeView",
   components: {
     HelloWorld,
     BrandButton,
+    IconsSVG,
   },
   data() {
     return {
