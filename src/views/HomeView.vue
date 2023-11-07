@@ -1,4 +1,13 @@
 <template>
+  <EnTete2 barreVisible="true">
+    <template #boutonContact>
+      <div style="display: flex; align-items: center">
+        <BoutonStandard couleur="couleur-secondaire" taille="texte-moyen"
+          >Test</BoutonStandard
+        >
+      </div>
+    </template>
+  </EnTete2>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App for UI components" />
@@ -27,18 +36,28 @@
       <span>Edit</span>
     </BrandButton>
   </div>
+  <BoutonStandard couleur="couleur-primaire" taille="titre-moyen"
+    >Test</BoutonStandard
+  >
+  <Dropdown />
+  <ModalInformation />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import BrandButton from "@/components/BrandButton.vue";
+import EnTete2 from "@/composants/EnTete2.vue";
+import HelloWorld from "@/composants/HelloWorld.vue";
+import BrandButton from "@/composants/BrandButton.vue";
+import BoutonStandard from "@/composants/BoutonStandard.vue";
+import ModalInformation from "@/composants/ModalInformation.vue";
 
 export default {
   name: "HomeView",
   components: {
     HelloWorld,
     BrandButton,
+    EnTete2,
+    BoutonStandard,
+    ModalInformation,
   },
   data() {
     return {

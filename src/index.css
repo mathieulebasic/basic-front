@@ -3,10 +3,129 @@
 @tailwind components;
 @tailwind utilities;
 
+/* latin-ext */
+@font-face {
+    font-family: 'font-family-texte';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'font-family-texte-gras';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @layer base {
     :root {
-        --color-primary: 255 115 179;
+        --font-systeme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+            'Helvetica Neue', sans-serif;
+        --font-family-texte-leger: 'font-family-texte', var(--font-systeme);
+        --font-family-texte-gras: 'font-family-texte-gras', var(--font-systeme);
+        --font-family-texte: 'font-family-texte', var(--font-systeme);
+        --color-primary: #009999;
         --color-secondary: 111 114 185;
+        --couleur-primaire-clair: #AACDC7;
+        --couleur-primaire: #009999;
+        --couleur-primaire-sombre: #2B4E47;
+
+        --couleur-secondaire-clair: #ECE9EE;
+        --couleur-secondaire: #5D3A78;
+        --couleur-secondaire-sombre: #2F1D3C;
+
+        --couleur-accent-clair: #F1E0A0;
+        --couleur-accent: #E3C140;
+        --couleur-accent-sombre: #726120;
+
+        --couleur-neutre-clair: #F7F6F4;
+        --couleur-blanc: #FFFFFF;
         /* ... */
+        /* unite de marge/padding pour le design system, en pixel */
+        --dsem: 8px;
+        --dsem2: calc(2 * var(--dsem));
+        --dsem3: calc(3 * var(--dsem));
+        --dsem4: calc(4 * var(--dsem));
+        --dsem6: calc(6 * var(--dsem));
+        --dsem8: calc(8 * var(--dsem));
     }
+}
+
+#app {
+    font-family: var(--font-family-texte);
+}
+
+.texte-petit {
+    font-family: var(--font-family-texte-gras);
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+}
+
+.texte-petit-majuscule {
+    font-family: var(--font-family-texte-gras);
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.texte-moyen,
+p,
+li {
+    font-family: var(--font-family-texte);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.texte-titre,
+h6 {
+    font-family: var(--font-family-texte-gras);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.texte-alternatif {
+    font-family: var(--font-family-texte-gras);
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.titre-petit,
+h4 {
+    font-family: var(--font-family-titre);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+
+h3 {
+    font-family: var(--font-family-titre);
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+
+.titre-moyen,
+h2 {
+    font-family: var(--font-family-titre);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+}
+
+.titre-large,
+h1 {
+    font-family: var(--font-family-titre);
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.04em;
 }
